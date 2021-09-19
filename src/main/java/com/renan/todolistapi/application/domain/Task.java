@@ -2,7 +2,7 @@ package com.renan.todolistapi.application.domain;
 
 import java.time.LocalDateTime;
 
-import com.renan.todolistapi.adapters.dtos.TaskDto;
+import com.renan.todolistapi.adapters.controllers.dtos.TaskDto;
 import com.renan.todolistapi.adapters.repositories.entities.TaskEntity;
 
 public class Task {
@@ -11,20 +11,17 @@ public class Task {
     private int taskId;
     private String title;
     private String description;
-    private String status;
+    private TaskStatus status;
     private LocalDateTime insertDate;
     private LocalDateTime updateDate;
 
-    public Task(String userId, int taskId, String title, String description, String status, LocalDateTime insertDate,
-            LocalDateTime updateDate) {
+    public Task(String userId, int taskId, String title, String description, String status) {
 
         this.userId = userId;
         this.taskId = taskId;
         this.title = title;
         this.description = description;
-        this.status = status;
-        this.insertDate = insertDate;
-        this.updateDate = updateDate;
+        this.status = Enum.valueOf(TaskStatus.class, status.toUpperCase());
     }
 
     public String getUserId() {
@@ -43,7 +40,7 @@ public class Task {
         return description;
     }
 
-    public String getStatus() {
+    public TaskStatus getStatus() {
         return status;
     }
 
@@ -51,17 +48,28 @@ public class Task {
         return insertDate;
     }
 
+    public void setInsertDate(LocalDateTime insertDate) {
+        this.insertDate = insertDate;
+    }
+
     public LocalDateTime getUpdateDate() {
         return updateDate;
     }
 
+    public void setUpdateDate(LocalDateTime updateDate) {
+        this.updateDate = updateDate;
+    }
+
     public static Task fromDto(TaskDto taskDto) {
-        return new Task(taskDto.userId, taskDto.taskId, taskDto.title, taskDto.description, taskDto.status,
-            taskDto.insertDate, taskDto.updateDate);
+        return new Task(taskDto.userId, taskDto.taskId, taskDto.title, taskDto.description, taskDto.status);
     }
 
     public static Task fromEntity(TaskEntity taskEntity) {
-        return new Task(taskEntity.getUserId(), taskEntity.getTaskId(), taskEntity.getTitle(), taskEntity.getDescription(), taskEntity.getStatus(),
-            taskEntity.getInsertDate(), taskEntity.getUpdateDate());
+        Task task = new Task(taskEntity.getUserId(), taskEntity.getTaskId(), taskEntity.getTitle(),
+                taskEntity.getDescription(), taskEntity.getStatus());
+        task.setInsertDate(taskEntity.getInsertDate());
+        task.setUpdateDate(taskEntity.getUpdateDate());
+
+        return task;
     }
 }

@@ -4,11 +4,11 @@ import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import javax.crypto.SecretKey;
+import com.renan.todolistapi.adapters.controllers.config.JwtSecretGenerator;
+import com.renan.todolistapi.adapters.controllers.dtos.UserDto;
+import com.renan.todolistapi.application.services.UserService;
 
-import com.renan.todolistapi.adapters.dtos.UserDto;
-import com.renan.todolistapi.config.JwtSecretGenerator;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,38 +17,36 @@ import org.springframework.web.bind.annotation.RestController;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
-import io.jsonwebtoken.io.Encoders;
-import io.jsonwebtoken.security.Keys;
 
 @RestController
 public class UserController {
     
-    @PostMapping("/user")
-	public UserDto login(@RequestParam("username") String username, @RequestParam("password") String pwd) {
+	@Autowired
+	private UserService userService;
+
+    @PostMapping("/token")
+	public UserDto login(@RequestParam("user") String userId, @RequestParam("pass") String pass) {
 		
-		String token = getJWTToken(username);
-		UserDto user = new UserDto();
-		user.setUser(username);
+		UserDto user = UserDto.fromDomain(userService.authenticate(userId, pass));
+		String token = getJWTToken(user);
 		user.setToken(token);		
 		return user;
-		
 	}
 
-    private String getJWTToken(String username) {
+    private String getJWTToken(UserDto user) {
 		List<GrantedAuthority> grantedAuthorities = AuthorityUtils
-				.commaSeparatedStringToAuthorityList("ROLE_USER");
-		
+				.commaSeparatedStringToAuthorityList(user.getUserRole());
 		
 		String token = Jwts
 				.builder()
-				.setId("softtekJWT")
-				.setSubject(username)
+				.setId("todo-list-api")
+				.setSubject(user.getUsername())
 				.claim("authorities",
 						grantedAuthorities.stream()
 								.map(GrantedAuthority::getAuthority)
 								.collect(Collectors.toList()))
 				.setIssuedAt(new Date(System.currentTimeMillis()))
-				.setExpiration(new Date(System.currentTimeMillis() + 600000))
+				.setExpiration(new Date(System.currentTimeMillis() + user.getExpiresIn()))
 				.signWith(SignatureAlgorithm.HS256, JwtSecretGenerator.Instance().getSecret().getBytes())
 				.compact();
 

@@ -1,6 +1,6 @@
 package com.renan.todolistapi;
 
-import com.renan.todolistapi.config.JWTAuthorizationFilter;
+import com.renan.todolistapi.adapters.controllers.config.JWTAuthorizationFilter;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -27,7 +27,9 @@ public class TodoListApiApplication {
 			http.csrf().disable()
 				.addFilterAfter(new JWTAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class)
 				.authorizeRequests()
-				.antMatchers(HttpMethod.POST, "/user").permitAll()
+				.antMatchers(HttpMethod.POST, "/token").permitAll().and()
+				.authorizeRequests()
+				.antMatchers(HttpMethod.GET, "/actuator/health").permitAll()
 				.anyRequest().authenticated();
 		}
 	}

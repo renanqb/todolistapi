@@ -16,7 +16,8 @@ import org.springframework.data.annotation.Id;
 @DynamoDBTable(tableName = "tasks-table")
 public class TaskEntity {
 
-    @Id private TaskEntityKey partitionKey;
+    @Id
+    private TaskEntityKey partitionKey;
     private String title;
     private String description;
     private String status;
@@ -106,7 +107,7 @@ public class TaskEntity {
     }
 
     public static TaskEntity fromDomain(Task task) {
-        return new TaskEntity(task.getUserId(), task.getTaskId(), task.getTitle(), task.getDescription(), task.getStatus(),
-                task.getInsertDate(), task.getUpdateDate());
+        return new TaskEntity(task.getUserId(), task.getTaskId(), task.getTitle(), task.getDescription(),
+                task.getStatus().name(), task.getInsertDate(), task.getUpdateDate());
     }
 }

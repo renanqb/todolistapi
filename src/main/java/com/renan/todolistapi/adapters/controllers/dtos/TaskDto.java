@@ -1,4 +1,4 @@
-package com.renan.todolistapi.adapters.dtos;
+package com.renan.todolistapi.adapters.controllers.dtos;
 
 import java.time.LocalDateTime;
 
@@ -39,7 +39,7 @@ public class TaskDto {
     public LocalDateTime updateDate;
 
     public static TaskDto fromDomain(Task task) {
-        return new TaskDto(task.getUserId(), task.getTaskId(), task.getTitle(), task.getDescription(), task.getStatus(),
-                task.getInsertDate(), task.getUpdateDate());
+        return new TaskDto(task.getUserId(), task.getTaskId(), task.getTitle(), task.getDescription(),
+                task.getStatus().name(), task.getInsertDate(), task.getUpdateDate());
     }
 }

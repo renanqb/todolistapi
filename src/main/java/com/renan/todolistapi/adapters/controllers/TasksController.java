@@ -3,9 +3,10 @@ package com.renan.todolistapi.adapters.controllers;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.renan.todolistapi.adapters.dtos.DataContainerDto;
-import com.renan.todolistapi.adapters.dtos.TaskDto;
+import com.renan.todolistapi.adapters.controllers.dtos.DataContainerDto;
+import com.renan.todolistapi.adapters.controllers.dtos.TaskDto;
 import com.renan.todolistapi.application.domain.Task;
+import com.renan.todolistapi.application.domain.TaskStatus;
 import com.renan.todolistapi.application.services.TasksService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,47 +18,51 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/v1")
-public class TasksController {
+public class TasksController extends BaseController {
 
     @Autowired
     protected TasksService taskService;
 
     @GetMapping("/tasks")
-    public DataContainerDto getAll() {
+    public DataContainerDto getAll(@RequestParam(name = "status", defaultValue = "NONE") String status) {
+        String username = getTokenUser().getUsername();
+        String userRole = getTokenUser().getUserRole();
 
-        List<TaskDto> tasks = taskService.findAll("666").stream().map(m -> TaskDto.fromDomain(m))
-                .collect(Collectors.toList());
+        List<TaskDto> tasks = taskService.findAll(username, userRole, status).stream()
+                .map(m -> TaskDto.fromDomain(m)).collect(Collectors.toList());
 
         return new DataContainerDto(tasks);
     }
 
     @GetMapping("/tasks/{id}")
     public DataContainerDto getById(@PathVariable(value = "id") int id) {
-        TaskDto task = TaskDto.fromDomain(taskService.findById("666", id));
+        TaskDto task = TaskDto.fromDomain(taskService.findById(getTokenUser().getUsername(), id));
         return new DataContainerDto(task);
     }
 
     @PostMapping("/tasks")
     @ResponseStatus(code = HttpStatus.CREATED)
     public DataContainerDto create(@RequestBody TaskDto task) {
-        taskService.createOrUpdate(Task.fromDto(task));
-        return new DataContainerDto(task);
+        task.userId = getTokenUser().getUsername();
+        return new DataContainerDto(taskService.createOrUpdate(Task.fromDto(task)));
     }
 
     @PutMapping("/tasks/{id}")
     @ResponseStatus(code = HttpStatus.NO_CONTENT)
     public void update(@RequestBody TaskDto task) {
-
+        task.userId = getTokenUser().getUsername();
+        taskService.createOrUpdate(Task.fromDto(task));
     }
 
     @DeleteMapping("/tasks/{id}")
     @ResponseStatus(code = HttpStatus.NO_CONTENT)
     public void delete(@PathVariable(value = "id") int id) {
-        taskService.deleteById("667", id);
+        taskService.deleteById(getTokenUser().getUsername(), id);
     }
 }

@@ -1,4 +1,4 @@
-package com.renan.todolistapi.config;
+package com.renan.todolistapi.adapters.controllers.config;
 
 import java.io.IOException;
 import java.util.List;
@@ -53,19 +53,13 @@ public class JWTAuthorizationFilter extends OncePerRequestFilter {
 				.parseClaimsJws(jwtToken).getBody();
 	}
 
-	/**
-	 * Authentication method in Spring flow
-	 * 
-	 * @param claims
-	 */
 	private void setUpSpringAuthentication(Claims claims) {
 		@SuppressWarnings("unchecked")
-		List<String> authorities = (List) claims.get("authorities");
+		List<String> authorities = (List<String>) claims.get("authorities");
 
 		UsernamePasswordAuthenticationToken auth = new UsernamePasswordAuthenticationToken(claims.getSubject(), null,
 				authorities.stream().map(SimpleGrantedAuthority::new).collect(Collectors.toList()));
 		SecurityContextHolder.getContext().setAuthentication(auth);
-
 	}
 
 	private boolean checkJWTToken(HttpServletRequest request, HttpServletResponse res) {

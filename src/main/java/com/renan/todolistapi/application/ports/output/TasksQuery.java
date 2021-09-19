@@ -1,11 +1,12 @@
 package com.renan.todolistapi.application.ports.output;
 
-import java.util.List;
+import java.util.Optional;
 
-import com.renan.todolistapi.application.domain.Task;
+import com.renan.todolistapi.adapters.repositories.entities.TaskEntity;
+import com.renan.todolistapi.adapters.repositories.entities.keys.TaskEntityKey;
 
 public interface TasksQuery {
     
-    List<Task> listAll(String userId);
-    Task findById(String userId, int taskId);
+    Iterable<TaskEntity> findAllByUserId(String userId);
+    Optional<TaskEntity> findById(TaskEntityKey key);
 }

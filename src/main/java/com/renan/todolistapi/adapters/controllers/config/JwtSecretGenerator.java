@@ -1,4 +1,4 @@
-package com.renan.todolistapi.config;
+package com.renan.todolistapi.adapters.controllers.config;
 
 import javax.crypto.SecretKey;
 
