@@ -1,0 +1,264 @@
+2021-09-21 14:55:29,749 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2021-09-21 14:55:29,772 INFO o.a.j.JMeter: Loading user properties from: D:\apps\apache-jmeter-5.3\bin\user.properties
+2021-09-21 14:55:29,773 INFO o.a.j.JMeter: Loading system properties from: D:\apps\apache-jmeter-5.3\bin\system.properties
+2021-09-21 14:55:29,776 INFO o.a.j.JMeter: Copyright (c) 1998-2020 The Apache Software Foundation
+2021-09-21 14:55:29,776 INFO o.a.j.JMeter: Version 5.3
+2021-09-21 14:55:29,776 INFO o.a.j.JMeter: java.version=1.8.0_282
+2021-09-21 14:55:29,776 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2021-09-21 14:55:29,777 INFO o.a.j.JMeter: os.name=Windows 10
+2021-09-21 14:55:29,777 INFO o.a.j.JMeter: os.arch=amd64
+2021-09-21 14:55:29,777 INFO o.a.j.JMeter: os.version=10.0
+2021-09-21 14:55:29,777 INFO o.a.j.JMeter: file.encoding=Cp1252
+2021-09-21 14:55:29,777 INFO o.a.j.JMeter: java.awt.headless=true
+2021-09-21 14:55:29,777 INFO o.a.j.JMeter: Max memory     =1073741824
+2021-09-21 14:55:29,777 INFO o.a.j.JMeter: Available Processors =4
+2021-09-21 14:55:29,786 INFO o.a.j.JMeter: Default Locale=English (EN)
+2021-09-21 14:55:29,787 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2021-09-21 14:55:29,787 INFO o.a.j.JMeter: JMeterHome=D:\apps\apache-jmeter-5.3
+2021-09-21 14:55:29,787 INFO o.a.j.JMeter: user.dir  =D:\git\todolistapi
+2021-09-21 14:55:29,787 INFO o.a.j.JMeter: PWD       =D:\git\todolistapi
+2021-09-21 14:55:29,789 INFO o.a.j.JMeter: IP: 172.26.16.1 Name: LAPTOP-SCJ41H89 FullName: LAPTOP-SCJ41H89.mshome.net
+2021-09-21 14:55:29,793 INFO o.a.j.JMeter: Setting property 'jmeter.reportgenerator.outputdir' to:'D:\git\todolistapi\artifacts\html'
+2021-09-21 14:55:29,797 INFO o.a.j.s.FileServer: Default base='D:\git\todolistapi'
+2021-09-21 14:55:29,819 INFO o.a.j.s.FileServer: Set new base='D:\git\todolistapi\artifacts'
+2021-09-21 14:55:30,208 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2021-09-21 14:55:30,303 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2021-09-21 14:55:30,311 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2021-09-21 14:55:30,320 INFO o.a.j.s.SaveService: Loading file: D:\git\todolistapi\artifacts\TODO-LIST-API TEST PLAN.jmx
+2021-09-21 14:55:30,425 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2021-09-21 14:55:30,425 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2021-09-21 14:55:30,425 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2021-09-21 14:55:30,425 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2021-09-21 14:55:30,425 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2021-09-21 14:55:30,425 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2021-09-21 14:55:30,622 INFO o.a.j.JMeter: Creating summariser <summary>
+2021-09-21 14:55:30,649 INFO o.a.j.r.d.ReportGenerator: ReportGenerator will use for Parsing the separator: ','
+2021-09-21 14:55:30,650 INFO o.a.j.r.d.ReportGenerator: Will generate report at end of test from  results file: testresults.csv
+2021-09-21 14:55:30,650 INFO o.a.j.r.d.ReportGenerator: Reading report generator properties from: D:\apps\apache-jmeter-5.3\bin\reportgenerator.properties
+2021-09-21 14:55:30,772 INFO o.a.j.r.d.ReportGenerator: Merging with JMeter properties
+2021-09-21 14:55:30,807 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.temp_dir' not found, using default value 'temp' instead.
+2021-09-21 14:55:30,811 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.apdex_per_transaction' not found, using default value 'null' instead.
+2021-09-21 14:55:30,811 INFO o.a.j.r.c.ReportGeneratorConfiguration: apdex_per_transaction is empty, not APDEX per transaction customization
+2021-09-21 14:55:30,812 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.sample_filter' not found, using default value 'null' instead.
+2021-09-21 14:55:30,812 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.report_title' not found, using default value 'null' instead.
+2021-09-21 14:55:30,812 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.start_date' not found, using default value 'null' instead.
+2021-09-21 14:55:30,812 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.end_date' not found, using default value 'null' instead.
+2021-09-21 14:55:30,812 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.date_format' not found, using default value 'null' instead.
+2021-09-21 14:55:30,813 INFO o.a.j.r.c.ReportGeneratorConfiguration: Will use date range start date: null, end date: null
+2021-09-21 14:55:30,827 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.totalTPS.exclude_controllers' not found, using default value 'false' instead.
+2021-09-21 14:55:30,827 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.activeThreadsOverTime.exclude_controllers' not found, using default value 'false' instead.
+2021-09-21 14:55:30,827 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.timeVsThreads.exclude_controllers' not found, using default value 'false' instead.
+2021-09-21 14:55:30,827 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimeDistribution.exclude_controllers' not found, using default value 'false' instead.
+2021-09-21 14:55:30,827 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.transactionsPerSecond.exclude_controllers' not found, using default value 'false' instead.
+2021-09-21 14:55:30,828 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentiles.exclude_controllers' not found, using default value 'false' instead.
+2021-09-21 14:55:30,828 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentilesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2021-09-21 14:55:30,828 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2021-09-21 14:55:30,829 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.connectTimeOverTime.exclude_controllers' not found, using default value 'false' instead.
+2021-09-21 14:55:30,829 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.latenciesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2021-09-21 14:55:30,830 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.filters_only_sample_series' not found, using default value 'true' instead.
+2021-09-21 14:55:30,830 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.series_filter' not found, using default value '' instead.
+2021-09-21 14:55:30,831 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.show_controllers_only' not found, using default value 'false' instead.
+2021-09-21 14:55:30,832 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.filters_only_sample_series' not found, using default value 'true' instead.
+2021-09-21 14:55:30,833 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.series_filter' not found, using default value '' instead.
+2021-09-21 14:55:30,833 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.show_controllers_only' not found, using default value 'false' instead.
+2021-09-21 14:55:30,840 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2021-09-21 14:55:30,876 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-09-21 14:55:30,876 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2021-09-21 14:55:30,882 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2021-09-21 14:55:30,882 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2021-09-21 14:55:31,523 INFO o.a.j.JMeter: Running test (1632246931523)
+2021-09-21 14:55:31,572 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : Authentication Token 
+2021-09-21 14:55:31,573 INFO o.a.j.e.StandardJMeterEngine: Starting 1 threads for group Authentication Token .
+2021-09-21 14:55:31,573 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2021-09-21 14:55:31,573 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=1 ramp-up=1 delayedStart=false
+2021-09-21 14:55:31,590 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2021-09-21 14:55:31,590 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 2 : Manage Tasks Group
+2021-09-21 14:55:31,590 INFO o.a.j.e.StandardJMeterEngine: Starting 20 threads for group Manage Tasks Group.
+2021-09-21 14:55:31,590 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2021-09-21 14:55:31,591 INFO o.a.j.t.ThreadGroup: Starting thread group... number=2 threads=20 ramp-up=1 delayedStart=false
+2021-09-21 14:55:31,604 INFO o.a.j.t.JMeterThread: Thread started: Authentication Token  1-1
+2021-09-21 14:55:31,616 INFO o.a.j.t.ThreadGroup: Started thread group number 2
+2021-09-21 14:55:31,616 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 3 : Find Tasks Group
+2021-09-21 14:55:31,616 INFO o.a.j.e.StandardJMeterEngine: Starting 20 threads for group Find Tasks Group.
+2021-09-21 14:55:31,616 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2021-09-21 14:55:31,617 INFO o.a.j.t.ThreadGroup: Starting thread group... number=3 threads=20 ramp-up=1 delayedStart=false
+2021-09-21 14:55:31,632 INFO o.a.j.t.ThreadGroup: Started thread group number 3
+2021-09-21 14:55:31,632 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2021-09-21 14:55:31,688 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = LAPTOP-SCJ41H89
+2021-09-21 14:55:31,698 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2021-09-21 14:55:31,701 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2021-09-21 14:55:31,702 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2021-09-21 14:55:31,702 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2021-09-21 14:55:31,702 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2021-09-21 14:55:32,074 INFO o.a.j.r.Summariser: summary +      1 in 00:00:01 =    1.8/s Avg:   147 Min:   147 Max:   147 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+2021-09-21 14:55:32,078 INFO o.a.j.t.JMeterThread: Thread is done: Authentication Token  1-1
+2021-09-21 14:55:32,078 INFO o.a.j.t.JMeterThread: Thread finished: Authentication Token  1-1
+2021-09-21 14:55:32,591 INFO o.a.j.t.JMeterThread: Thread started: Manage Tasks Group 2-1
+2021-09-21 14:55:32,641 INFO o.a.j.t.JMeterThread: Thread started: Manage Tasks Group 2-2
+2021-09-21 14:55:32,691 INFO o.a.j.t.JMeterThread: Thread started: Manage Tasks Group 2-3
+2021-09-21 14:55:32,742 INFO o.a.j.t.JMeterThread: Thread started: Manage Tasks Group 2-4
+2021-09-21 14:55:32,792 INFO o.a.j.t.JMeterThread: Thread started: Manage Tasks Group 2-5
+2021-09-21 14:55:32,841 INFO o.a.j.t.JMeterThread: Thread started: Manage Tasks Group 2-6
+2021-09-21 14:55:32,891 INFO o.a.j.t.JMeterThread: Thread started: Manage Tasks Group 2-7
+2021-09-21 14:55:32,942 INFO o.a.j.t.JMeterThread: Thread started: Manage Tasks Group 2-8
+2021-09-21 14:55:32,992 INFO o.a.j.t.JMeterThread: Thread started: Manage Tasks Group 2-9
+2021-09-21 14:55:33,042 INFO o.a.j.t.JMeterThread: Thread started: Manage Tasks Group 2-10
+2021-09-21 14:55:33,092 INFO o.a.j.t.JMeterThread: Thread started: Manage Tasks Group 2-11
+2021-09-21 14:55:33,149 INFO o.a.j.t.JMeterThread: Thread started: Manage Tasks Group 2-12
+2021-09-21 14:55:33,192 INFO o.a.j.t.JMeterThread: Thread started: Manage Tasks Group 2-13
+2021-09-21 14:55:33,242 INFO o.a.j.t.JMeterThread: Thread started: Manage Tasks Group 2-14
+2021-09-21 14:55:33,292 INFO o.a.j.t.JMeterThread: Thread started: Manage Tasks Group 2-15
+2021-09-21 14:55:33,341 INFO o.a.j.t.JMeterThread: Thread started: Manage Tasks Group 2-16
+2021-09-21 14:55:33,392 INFO o.a.j.t.JMeterThread: Thread started: Manage Tasks Group 2-17
+2021-09-21 14:55:33,442 INFO o.a.j.t.JMeterThread: Thread started: Manage Tasks Group 2-18
+2021-09-21 14:55:33,491 INFO o.a.j.t.JMeterThread: Thread started: Manage Tasks Group 2-19
+2021-09-21 14:55:33,541 INFO o.a.j.t.JMeterThread: Thread started: Manage Tasks Group 2-20
+2021-09-21 14:55:33,618 INFO o.a.j.t.JMeterThread: Thread started: Find Tasks Group 3-1
+2021-09-21 14:55:33,673 INFO o.a.j.t.JMeterThread: Thread started: Find Tasks Group 3-2
+2021-09-21 14:55:33,722 INFO o.a.j.t.JMeterThread: Thread started: Find Tasks Group 3-3
+2021-09-21 14:55:33,769 INFO o.a.j.t.JMeterThread: Thread started: Find Tasks Group 3-4
+2021-09-21 14:55:33,819 INFO o.a.j.t.JMeterThread: Thread started: Find Tasks Group 3-5
+2021-09-21 14:55:33,868 INFO o.a.j.t.JMeterThread: Thread started: Find Tasks Group 3-6
+2021-09-21 14:55:33,919 INFO o.a.j.t.JMeterThread: Thread started: Find Tasks Group 3-7
+2021-09-21 14:55:33,969 INFO o.a.j.t.JMeterThread: Thread started: Find Tasks Group 3-8
+2021-09-21 14:55:34,018 INFO o.a.j.t.JMeterThread: Thread started: Find Tasks Group 3-9
+2021-09-21 14:55:34,075 INFO o.a.j.t.JMeterThread: Thread started: Find Tasks Group 3-10
+2021-09-21 14:55:34,118 INFO o.a.j.t.JMeterThread: Thread started: Find Tasks Group 3-11
+2021-09-21 14:55:34,168 INFO o.a.j.t.JMeterThread: Thread started: Find Tasks Group 3-12
+2021-09-21 14:55:34,419 INFO o.a.j.t.JMeterThread: Thread started: Find Tasks Group 3-17
+2021-09-21 14:55:34,368 INFO o.a.j.t.JMeterThread: Thread started: Find Tasks Group 3-16
+2021-09-21 14:55:34,318 INFO o.a.j.t.JMeterThread: Thread started: Find Tasks Group 3-15
+2021-09-21 14:55:34,268 INFO o.a.j.t.JMeterThread: Thread started: Find Tasks Group 3-14
+2021-09-21 14:55:34,219 INFO o.a.j.t.JMeterThread: Thread started: Find Tasks Group 3-13
+2021-09-21 14:55:34,521 INFO o.a.j.t.JMeterThread: Thread started: Find Tasks Group 3-18
+2021-09-21 14:55:34,630 INFO o.a.j.t.JMeterThread: Thread started: Find Tasks Group 3-19
+2021-09-21 14:55:34,633 INFO o.a.j.t.JMeterThread: Thread started: Find Tasks Group 3-20
+2021-09-21 14:55:52,619 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Manage Tasks Group 2-13
+2021-09-21 14:55:52,620 INFO o.a.j.t.JMeterThread: Thread finished: Manage Tasks Group 2-13
+2021-09-21 14:55:53,104 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Manage Tasks Group 2-9
+2021-09-21 14:55:53,107 INFO o.a.j.t.JMeterThread: Thread finished: Manage Tasks Group 2-9
+2021-09-21 14:55:53,385 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Manage Tasks Group 2-11
+2021-09-21 14:55:53,385 INFO o.a.j.t.JMeterThread: Thread finished: Manage Tasks Group 2-11
+2021-09-21 14:55:53,734 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Find Tasks Group 3-1
+2021-09-21 14:55:53,735 INFO o.a.j.t.JMeterThread: Thread finished: Find Tasks Group 3-1
+2021-09-21 14:55:53,737 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Find Tasks Group 3-5
+2021-09-21 14:55:53,737 INFO o.a.j.t.JMeterThread: Thread finished: Find Tasks Group 3-5
+2021-09-21 14:55:53,737 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Find Tasks Group 3-16
+2021-09-21 14:55:53,738 INFO o.a.j.t.JMeterThread: Thread finished: Find Tasks Group 3-16
+2021-09-21 14:55:53,744 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Find Tasks Group 3-19
+2021-09-21 14:55:53,744 INFO o.a.j.t.JMeterThread: Thread finished: Find Tasks Group 3-19
+2021-09-21 14:55:53,747 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Find Tasks Group 3-13
+2021-09-21 14:55:53,747 INFO o.a.j.t.JMeterThread: Thread finished: Find Tasks Group 3-13
+2021-09-21 14:55:53,825 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Find Tasks Group 3-10
+2021-09-21 14:55:53,825 INFO o.a.j.t.JMeterThread: Thread finished: Find Tasks Group 3-10
+2021-09-21 14:55:53,827 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Find Tasks Group 3-12
+2021-09-21 14:55:53,827 INFO o.a.j.t.JMeterThread: Thread finished: Find Tasks Group 3-12
+2021-09-21 14:55:53,829 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Find Tasks Group 3-15
+2021-09-21 14:55:53,829 INFO o.a.j.t.JMeterThread: Thread finished: Find Tasks Group 3-15
+2021-09-21 14:55:53,829 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Find Tasks Group 3-17
+2021-09-21 14:55:53,829 INFO o.a.j.t.JMeterThread: Thread finished: Find Tasks Group 3-17
+2021-09-21 14:55:53,846 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Find Tasks Group 3-9
+2021-09-21 14:55:53,846 INFO o.a.j.t.JMeterThread: Thread finished: Find Tasks Group 3-9
+2021-09-21 14:55:53,962 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Manage Tasks Group 2-12
+2021-09-21 14:55:53,962 INFO o.a.j.t.JMeterThread: Thread finished: Manage Tasks Group 2-12
+2021-09-21 14:55:54,119 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Find Tasks Group 3-2
+2021-09-21 14:55:54,120 INFO o.a.j.t.JMeterThread: Thread finished: Find Tasks Group 3-2
+2021-09-21 14:55:54,121 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Find Tasks Group 3-14
+2021-09-21 14:55:54,121 INFO o.a.j.t.JMeterThread: Thread finished: Find Tasks Group 3-14
+2021-09-21 14:55:54,128 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Find Tasks Group 3-4
+2021-09-21 14:55:54,129 INFO o.a.j.t.JMeterThread: Thread finished: Find Tasks Group 3-4
+2021-09-21 14:55:54,131 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Find Tasks Group 3-11
+2021-09-21 14:55:54,131 INFO o.a.j.t.JMeterThread: Thread finished: Find Tasks Group 3-11
+2021-09-21 14:55:54,133 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Find Tasks Group 3-20
+2021-09-21 14:55:54,133 INFO o.a.j.t.JMeterThread: Thread finished: Find Tasks Group 3-20
+2021-09-21 14:55:54,135 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Find Tasks Group 3-8
+2021-09-21 14:55:54,136 INFO o.a.j.t.JMeterThread: Thread finished: Find Tasks Group 3-8
+2021-09-21 14:55:54,138 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Find Tasks Group 3-18
+2021-09-21 14:55:54,141 INFO o.a.j.t.JMeterThread: Thread finished: Find Tasks Group 3-18
+2021-09-21 14:55:54,143 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Find Tasks Group 3-7
+2021-09-21 14:55:54,143 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Find Tasks Group 3-3
+2021-09-21 14:55:54,144 INFO o.a.j.t.JMeterThread: Thread finished: Find Tasks Group 3-7
+2021-09-21 14:55:54,144 INFO o.a.j.t.JMeterThread: Thread finished: Find Tasks Group 3-3
+2021-09-21 14:55:54,146 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Find Tasks Group 3-6
+2021-09-21 14:55:54,146 INFO o.a.j.t.JMeterThread: Thread finished: Find Tasks Group 3-6
+2021-09-21 14:55:54,509 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Manage Tasks Group 2-1
+2021-09-21 14:55:54,511 INFO o.a.j.t.JMeterThread: Thread finished: Manage Tasks Group 2-1
+2021-09-21 14:55:54,961 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Manage Tasks Group 2-17
+2021-09-21 14:55:54,962 INFO o.a.j.t.JMeterThread: Thread finished: Manage Tasks Group 2-17
+2021-09-21 14:55:55,346 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Manage Tasks Group 2-19
+2021-09-21 14:55:55,347 INFO o.a.j.t.JMeterThread: Thread finished: Manage Tasks Group 2-19
+2021-09-21 14:55:56,005 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Manage Tasks Group 2-20
+2021-09-21 14:55:56,005 INFO o.a.j.t.JMeterThread: Thread finished: Manage Tasks Group 2-20
+2021-09-21 14:55:56,612 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Manage Tasks Group 2-10
+2021-09-21 14:55:56,612 INFO o.a.j.t.JMeterThread: Thread finished: Manage Tasks Group 2-10
+2021-09-21 14:55:57,232 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Manage Tasks Group 2-7
+2021-09-21 14:55:57,232 INFO o.a.j.t.JMeterThread: Thread finished: Manage Tasks Group 2-7
+2021-09-21 14:55:57,951 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Manage Tasks Group 2-2
+2021-09-21 14:55:57,951 INFO o.a.j.t.JMeterThread: Thread finished: Manage Tasks Group 2-2
+2021-09-21 14:56:01,063 INFO o.a.j.r.Summariser: summary +    228 in 00:00:29 =    7.9/s Avg:  3115 Min:   259 Max: 22808 Err:     0 (0.00%) Active: 9 Started: 41 Finished: 32
+2021-09-21 14:56:01,064 INFO o.a.j.r.Summariser: summary =    229 in 00:00:30 =    7.8/s Avg:  3102 Min:   147 Max: 22808 Err:     0 (0.00%)
+2021-09-21 14:56:01,065 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Manage Tasks Group 2-5
+2021-09-21 14:56:01,065 INFO o.a.j.t.JMeterThread: Thread finished: Manage Tasks Group 2-5
+2021-09-21 14:56:01,451 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Manage Tasks Group 2-14
+2021-09-21 14:56:01,451 INFO o.a.j.t.JMeterThread: Thread finished: Manage Tasks Group 2-14
+2021-09-21 14:56:01,782 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Manage Tasks Group 2-4
+2021-09-21 14:56:01,782 INFO o.a.j.t.JMeterThread: Thread finished: Manage Tasks Group 2-4
+2021-09-21 14:56:02,228 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Manage Tasks Group 2-18
+2021-09-21 14:56:02,228 INFO o.a.j.t.JMeterThread: Thread finished: Manage Tasks Group 2-18
+2021-09-21 14:56:02,834 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Manage Tasks Group 2-6
+2021-09-21 14:56:02,834 INFO o.a.j.t.JMeterThread: Thread finished: Manage Tasks Group 2-6
+2021-09-21 14:56:03,104 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Manage Tasks Group 2-15
+2021-09-21 14:56:03,104 INFO o.a.j.t.JMeterThread: Thread finished: Manage Tasks Group 2-15
+2021-09-21 14:56:03,513 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Manage Tasks Group 2-16
+2021-09-21 14:56:03,513 INFO o.a.j.t.JMeterThread: Thread finished: Manage Tasks Group 2-16
+2021-09-21 14:56:03,913 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Manage Tasks Group 2-8
+2021-09-21 14:56:03,913 INFO o.a.j.t.JMeterThread: Thread finished: Manage Tasks Group 2-8
+2021-09-21 14:56:04,213 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: Manage Tasks Group 2-3
+2021-09-21 14:56:04,213 INFO o.a.j.t.JMeterThread: Thread finished: Manage Tasks Group 2-3
+2021-09-21 14:56:04,213 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2021-09-21 14:56:04,252 INFO o.a.j.r.Summariser: summary +      8 in 00:00:03 =    2.5/s Avg: 24259 Min: 21732 Max: 27287 Err:     0 (0.00%) Active: 0 Started: 41 Finished: 41
+2021-09-21 14:56:04,253 INFO o.a.j.r.Summariser: summary =    237 in 00:00:33 =    7.2/s Avg:  3816 Min:   147 Max: 27287 Err:     0 (0.00%)
+2021-09-21 14:56:04,253 INFO o.a.j.JMeter: Generating Dashboard
+2021-09-21 14:56:04,253 INFO o.a.j.r.d.ReportGenerator: Flushing result collector before report Generation
+2021-09-21 14:56:05,658 INFO o.a.j.r.p.NormalizerSampleConsumer: Using format, 'ms', to parse timeStamp field
+2021-09-21 14:56:18,570 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): beginDate produced 0 samples
+2021-09-21 14:56:18,570 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): endDate produced 0 samples
+2021-09-21 14:56:18,637 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ApdexSummaryConsumer#stopProducing(): apdexSummary produced 0 samples
+2021-09-21 14:56:18,637 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.RequestsSummaryConsumer#stopProducing(): requestsSummary produced 0 samples
+2021-09-21 14:56:18,823 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.StatisticsSummaryConsumer#stopProducing(): statisticsSummary produced 0 samples
+2021-09-21 14:56:19,183 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.Top5ErrorsBySamplerConsumer#stopProducing(): top5ErrorsBySampler produced 0 samples
+2021-09-21 14:56:19,183 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ErrorsSummaryConsumer#stopProducing(): errorsSummary produced 0 samples
+2021-09-21 14:56:19,183 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.HitsPerSecondGraphConsumer#stopProducing(): hitsPerSecond produced 0 samples
+2021-09-21 14:56:19,526 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyVSRequestGraphConsumer#stopProducing(): latencyVsRequest produced 0 samples
+2021-09-21 14:56:19,527 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.SyntheticResponseTimeDistributionGraphConsumer#stopProducing(): syntheticResponseTimeDistribution produced 0 samples
+2021-09-21 14:56:19,528 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.BytesThroughputGraphConsumer#stopProducing(): bytesThroughputOverTime produced 0 samples
+2021-09-21 14:56:19,528 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.CodesPerSecondGraphConsumer#stopProducing(): codesPerSecond produced 0 samples
+2021-09-21 14:56:19,573 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeVSRequestGraphConsumer#stopProducing(): responseTimeVsRequest produced 0 samples
+2021-09-21 14:56:19,574 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): startIntervalControlerFilter produced 1659 samples
+2021-09-21 14:56:19,574 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TotalTPSGraphConsumer#stopProducing(): totalTPS produced 0 samples
+2021-09-21 14:56:19,574 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ActiveThreadsGraphConsumer#stopProducing(): activeThreadsOverTime produced 0 samples
+2021-09-21 14:56:19,575 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TimeVSThreadGraphConsumer#stopProducing(): timeVsThreads produced 0 samples
+2021-09-21 14:56:19,575 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeDistributionGraphConsumer#stopProducing(): responseTimeDistribution produced 0 samples
+2021-09-21 14:56:19,576 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TransactionsPerSecondGraphConsumer#stopProducing(): transactionsPerSecond produced 0 samples
+2021-09-21 14:56:19,576 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesGraphConsumer#stopProducing(): responseTimePercentiles produced 0 samples
+2021-09-21 14:56:19,584 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesOverTimeGraphConsumer#stopProducing(): responseTimePercentilesOverTime produced 0 samples
+2021-09-21 14:56:19,585 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeOverTimeGraphConsumer#stopProducing(): responseTimesOverTime produced 0 samples
+2021-09-21 14:56:19,585 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ConnectTimeOverTimeGraphConsumer#stopProducing(): connectTimeOverTime produced 0 samples
+2021-09-21 14:56:19,586 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyOverTimeGraphConsumer#stopProducing(): latenciesOverTime produced 0 samples
+2021-09-21 14:56:19,586 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): nameFilter produced 3555 samples
+2021-09-21 14:56:19,586 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): dateRangeFilter produced 711 samples
+2021-09-21 14:56:19,586 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.NormalizerSampleConsumer#stopProducing(): normalizer produced 237 samples
+2021-09-21 14:56:19,587 INFO o.a.j.r.p.CsvFileSampleSource: produce(): 237 samples produced in 13s 643 ms on channel 0
+2021-09-21 14:56:19,587 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'json' of className:'org.apache.jmeter.report.dashboard.JsonExporter'
+2021-09-21 14:56:19,659 INFO o.a.j.r.d.JsonExporter: Found data for consumer statisticsSummary in context
+2021-09-21 14:56:19,659 INFO o.a.j.r.d.JsonExporter: Creating statistics for overall
+2021-09-21 14:56:19,659 INFO o.a.j.r.d.JsonExporter: Creating statistics for other transactions
+2021-09-21 14:56:19,660 INFO o.a.j.r.d.JsonExporter: Checking output folder
+2021-09-21 14:56:19,661 INFO o.a.j.r.d.JsonExporter: Writing statistics JSON to D:\git\todolistapi\artifacts\html\statistics.json
+2021-09-21 14:56:24,463 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'html' of className:'org.apache.jmeter.report.dashboard.HtmlTemplateExporter'
+2021-09-21 14:56:24,549 INFO o.a.j.r.d.HtmlTemplateExporter: Will generate dashboard in folder: D:\git\todolistapi\artifacts\html
+2021-09-21 14:56:27,947 ERROR f.configuration: DefaultObjectWrapper.incompatibleImprovements was set to the object returned by Configuration.getVersion(). That defeats the purpose of incompatibleImprovements, and makes upgrading FreeMarker a potentially breaking change. Also, this probably won't be allowed starting from 2.4.0. Instead, set incompatibleImprovements to the highest concrete version that's known to be compatible with your application.
+2021-09-21 14:56:27,951 ERROR f.configuration: Configuration.incompatibleImprovements was set to the object returned by Configuration.getVersion(). That defeats the purpose of incompatibleImprovements, and makes upgrading FreeMarker a potentially breaking change. Also, this probably won't be allowed starting from 2.4.0. Instead, set incompatibleImprovements to the highest concrete version that's known to be compatible with your application.
+2021-09-21 14:56:28,182 INFO o.a.j.r.d.HtmlTemplateExporter: Report will be generated in: D:\git\todolistapi\artifacts\html, creating folder structure
+2021-09-21 14:56:28,303 INFO o.a.j.r.d.TemplateVisitor: Copying folder from 'D:\apps\apache-jmeter-5.3\bin\report-template' to 'D:\git\todolistapi\artifacts\html', got message: D:\git\todolistapi\artifacts\html, found non empty folder with following content [D:\git\todolistapi\artifacts\html\statistics.json], will be ignored
+2021-09-21 14:57:03,363 INFO o.a.j.JMeter: Dashboard generated

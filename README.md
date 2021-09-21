@@ -1,5 +1,6 @@
 # todolistapi
 RESTFUL API simples em Java que armazena e atualiza tarefas
+- 
 
 ## Arquitetura
 Foi utilizado a padrão hexagonal de arquitetura - ports & adapters (https://alistair.cockburn.us/hexagonal-architecture/)
@@ -8,6 +9,7 @@ Foi utilizado a padrão hexagonal de arquitetura - ports & adapters (https://ali
 Para executar esse projeto as seguintes ferramentas foram utilizadas: 
 - Instalar o Java 8 (https://www.java.com/pt-BR/download/manual.jsp) e adicionar ao PATH
 - Instalar o Maven 3.X (https://maven.apache.org/download.cgi) e adicionar ao PATH
+- Jmeter (https://jmeter.apache.org/download_jmeter.cgi) e adicionar ao PATH
 - GIT (https://git-scm.com/downloads)
 - VsCode com os plugins (Extensin Pack for Java, Spring Initializr Java Support, Git Lens, XML Tools)
 - DynamoDB (https://docs.aws.amazon.com/pt_br/amazondynamodb/latest/developerguide/DynamoDBLocal.DownloadingAndRunning.html)
@@ -116,3 +118,16 @@ Na api podemos criar, atualizar, excluir e obter tarefas de um usuário. Exemplo
     --header 'Content-Type: application/json' \
     --header 'Authorization: Bearer {token}'
     ```
+
+## Execução dos testes de carga
+Podemos rodar os testes de carga tanto pela UI do JMeter quanto pelo CLI. Ex:
+```
+jmeter -n -t="/d/git/todolistapi/artifacts/TODO-LIST-API TEST PLAN.jmx" -l testresults.csv -e -o "/d/git/todolistapi/artifacts/html"
+```
+Após execução, abrir o arquivo /html/index.html para ver os resultados.
+
+## Dívidas técnicas
+- Habilitar todo o ambiente através do docker-compose
+- Realizar testes de integração/componente com o DynamoDB embedded para poder rodar em esteira CI
+- Usuários não estão cadastrados na base de dados mas sim como stubs no UserRepository
+- Não foi adicionado endpoint /metrics com o prometheus
