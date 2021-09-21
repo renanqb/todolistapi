@@ -85,18 +85,6 @@
 			<version>0.11.2</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/com.github.derjust/spring-data-dynamodb -->
-		<dependency>
-			<groupId>com.github.derjust</groupId>
-			<artifactId>spring-data-dynamodb</artifactId>
-			<version>5.1.0</version>
-		</dependency>
-		<dependency>
-			<groupId>com.amazonaws</groupId>
-			<artifactId>aws-java-sdk-dynamodb</artifactId>
-			<version>1.11.64</version>
-		</dependency>
-
 		<dependency>
 			<groupId>io.opentracing.contrib</groupId>
 			<artifactId>opentracing-spring-jaeger-web-starter</artifactId>

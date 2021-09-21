@@ -6,7 +6,6 @@ import java.util.stream.Collectors;
 import com.renan.todolistapi.adapters.controllers.dtos.DataContainerDto;
 import com.renan.todolistapi.adapters.controllers.dtos.TaskDto;
 import com.renan.todolistapi.application.domain.Task;
-import com.renan.todolistapi.application.domain.TaskStatus;
 import com.renan.todolistapi.application.services.TasksService;
 
 import org.springframework.beans.factory.annotation.Autowired;

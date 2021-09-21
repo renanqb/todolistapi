@@ -10,6 +10,10 @@ import com.renan.todolistapi.application.domain.Task;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class TaskDto {
 
+    public TaskDto() {
+        
+    }
+
     public TaskDto(String userId, int taskId, String title, String desc, String status, LocalDateTime insDate,
             LocalDateTime updDate) {
         this.userId = userId;

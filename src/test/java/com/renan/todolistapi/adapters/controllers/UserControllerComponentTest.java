@@ -2,16 +2,11 @@ package com.renan.todolistapi.adapters.controllers;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
-import static org.mockito.ArgumentMatchers.isA;
-import static org.mockito.ArgumentMatchers.isNotNull;
-import static org.mockito.ArgumentMatchers.isNull;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.renan.todolistapi.adapters.controllers.config.JwtSecretGenerator;
 import com.renan.todolistapi.adapters.controllers.dtos.UserDto;
 
 import org.hamcrest.core.Is;
-import org.hamcrest.core.IsNot;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -25,7 +20,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class UserControllerIntegrationTest {
+public class UserControllerComponentTest {
 
     @LocalServerPort private int port;
     TestRestTemplate restTemplate = new TestRestTemplate();
@@ -42,7 +37,6 @@ public class UserControllerIntegrationTest {
         UserDto user = new ObjectMapper().readValue(response.getBody(), UserDto.class);
         
         assertThat(user.getUsername(), is("admin"));
-        //assertThat(user.getUserRole(), isNull());
         assertThat(user.getExpiresIn(), is(300000));
         assertThat(user.getToken(), Is.isA(String.class));
     } 
