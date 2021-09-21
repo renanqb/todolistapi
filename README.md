@@ -9,10 +9,11 @@ Foi utilizado a padrão hexagonal de arquitetura - ports & adapters (https://ali
 Para executar esse projeto as seguintes ferramentas foram utilizadas: 
 - Instalar o Java 8 (https://www.java.com/pt-BR/download/manual.jsp) e adicionar ao PATH
 - Instalar o Maven 3.X (https://maven.apache.org/download.cgi) e adicionar ao PATH
+- DynamoDB (https://docs.aws.amazon.com/pt_br/amazondynamodb/latest/developerguide/DynamoDBLocal.DownloadingAndRunning.html)
+    - A decisão de utilizar o DynamoDB se deu pois responde bem à incerteza do tipo do dado, que pode variar (NoSQL), performance e por possuir alta disponibilidade e escalabilidade.
 - Jmeter (https://jmeter.apache.org/download_jmeter.cgi) e adicionar ao PATH
 - GIT (https://git-scm.com/downloads)
 - VsCode com os plugins (Extensin Pack for Java, Spring Initializr Java Support, Git Lens, XML Tools)
-- DynamoDB (https://docs.aws.amazon.com/pt_br/amazondynamodb/latest/developerguide/DynamoDBLocal.DownloadingAndRunning.html)
 - NoSQL Workbench (https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/workbench.settingup.html)
 - Postman (https://www.postman.com/downloads/)
 - Docker (https://docs.docker.com/get-docker/)
