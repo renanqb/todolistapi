@@ -4,6 +4,13 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
+### JMeter ###
+/artifacts/html/
+/artifacts/*.csv
+/artifacts/*.jtl
+*.csv
+*.log
+
 ### STS ###
 .apt_generated
 .classpath
