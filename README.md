@@ -56,7 +56,10 @@ Para executar esse projeto as seguintes ferramentas foram utilizadas:
 
 ## Execução dos testes
 - Existem dois tipos de testes no projeto: unitários e de componente.
-- Para executá-los basta executar 'mvn clean verify'
+- Para executá-los basta executar:
+    ```
+        mvn clean verify
+    ``` 
     - **PS: O DynamoDB precisa estar executando localmente para o correto funcionamento do testes de componente.**
 - Após a execução, teremos o relatório do jacoco na pasta '/target/site/jacoco/index.htm'
     - **PS: a cobertura atual é de 94% para linhas e 79% para branches**
