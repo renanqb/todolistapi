@@ -18,7 +18,13 @@ Para executar esse projeto as seguintes ferramentas foram utilizadas:
 
 ## Execução local
 - Após instalar todos os itens do Setup devemos: 
-    - Executar o DynamoDB: 'java -D"java.library.path=./DynamoDBLocal_lib" -jar DynamoDBLocal.jar -sharedDb' on path é a pasta onde os arquivos do Dynamo foram descompactados.
+    - Baixar o repo de https://github.com/renanqb/todolistapi
+        - branch "develop"
+    - Executar o DynamoDB
+        ```
+            java -D"java.library.path=./DynamoDBLocal_lib" -jar DynamoDBLocal.jar -sharedDb
+        ``` 
+        on path é a pasta onde os arquivos do Dynamo foram descompactados.
     - Executar o jeager para habilitar o tracing da aplicação: 
     ```
         docker run -d --name jaeger \
