@@ -24,9 +24,13 @@ public class TaskEntity {
     private LocalDateTime insertDate;
     private LocalDateTime updateDate;
 
+    public TaskEntity() {
+        this.partitionKey = new TaskEntityKey("", 0);
+    }
+
     public TaskEntity(String userId, int taskId, String title, String description, String status,
             LocalDateTime insertDate, LocalDateTime updateDate) {
-        this.partitionKey = new TaskEntityKey("", 0);
+        this();
         setUserId(userId);
         setTaskId(taskId);
         setTitle(title);
