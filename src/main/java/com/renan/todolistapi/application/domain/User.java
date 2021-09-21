@@ -9,10 +9,6 @@ public class User {
     private UserRole role;
     private Boolean authenticated;
 
-    public User() {
-        this("", "", UserRole.NONE.name());
-    }
-
     public User(String user, String pass, String role) {
         this.username = user;
         this.password = pass;

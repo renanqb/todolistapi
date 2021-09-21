@@ -15,11 +15,15 @@ import com.renan.todolistapi.application.domain.TaskStatus;
 import com.renan.todolistapi.application.domain.UserRole;
 import com.renan.todolistapi.application.exceptions.NotFoundException;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class TasksServiceImpl implements TasksService {
+
+    static Logger logger = LoggerFactory.getLogger(TasksServiceImpl.class);
 
     @Autowired
     protected TasksRepository tasksRepository;
@@ -53,7 +57,7 @@ public class TasksServiceImpl implements TasksService {
     public Task findById(String userId, int taskId) {
         Optional<TaskEntity> taskEntity = tasksRepository.findById(new TaskEntityKey(userId, taskId));
 
-        if (taskEntity.isEmpty())
+        if (!taskEntity.isPresent())
             throw new NotFoundException(String.format("Task %s not found for user %s", taskId, userId));
 
         return Task.fromEntity(taskEntity.get());

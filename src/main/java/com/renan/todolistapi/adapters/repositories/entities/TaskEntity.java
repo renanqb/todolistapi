@@ -24,21 +24,16 @@ public class TaskEntity {
     private LocalDateTime insertDate;
     private LocalDateTime updateDate;
 
-    public TaskEntity() {
-        this.partitionKey = new TaskEntityKey("", 0);
-    }
-
     public TaskEntity(String userId, int taskId, String title, String description, String status,
             LocalDateTime insertDate, LocalDateTime updateDate) {
-
-        this();
-        this.partitionKey.setUserId(userId);
-        this.partitionKey.setTaskId(taskId);
-        this.title = title;
-        this.description = description;
-        this.status = status;
-        this.insertDate = insertDate;
-        this.updateDate = updateDate;
+        this.partitionKey = new TaskEntityKey("", 0);
+        setUserId(userId);
+        setTaskId(taskId);
+        setTitle(title);
+        setDescription(description);
+        setStatus(status);
+        setInsertDate(insertDate);
+        setUpdateDate(updateDate);
     }
 
     @DynamoDBHashKey(attributeName = "pk_user_id")

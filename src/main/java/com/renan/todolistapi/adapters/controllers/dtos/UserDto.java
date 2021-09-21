@@ -19,13 +19,16 @@ public class UserDto {
     @JsonIgnore
     private String userRole;
 
+    public UserDto() {
+        
+    }
 
     public UserDto(String username, String userRole) {
-        this.username = username;
-        this.token = "";
-        this.expiresIn = 300000;
+        setUser(username);
+        setToken("");
+        setExpiresIn(300000);
+        setUserRole(userRole);
         this.type = "Bearer";
-        this.userRole = userRole;
     }
 
     public String getUsername() {
@@ -54,6 +57,10 @@ public class UserDto {
 
     public String getUserRole() {
         return this.userRole;
+    }
+
+    public void setUserRole(String userRole) {
+        this.userRole = userRole;
     }
 
     public static UserDto fromDomain(User user) {
