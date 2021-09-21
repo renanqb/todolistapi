@@ -18,7 +18,7 @@ Para executar esse projeto as seguintes ferramentas foram utilizadas:
 
 ## Execução local
 - Após instalar todos os itens do Setup devemos: 
-    - Executar o DynamoDB: ' java -D"java.library.path=./DynamoDBLocal_lib" -jar DynamoDBLocal.jar -sharedDb ' on path é a pasta onde os arquivos do Dynamo foram descompactados.
+    - Executar o DynamoDB: 'java -D"java.library.path=./DynamoDBLocal_lib" -jar DynamoDBLocal.jar -sharedDb' on path é a pasta onde os arquivos do Dynamo foram descompactados.
     - Executar o jeager para habilitar o tracing da aplicação: 
     ```
         docker run -d --name jaeger \
@@ -33,19 +33,21 @@ Para executar esse projeto as seguintes ferramentas foram utilizadas:
             -p 9411:9411 \
             jaegertracing/all-in-one:latest
     ```
+    - O Jeager UI pode ser aberto no endereço http://localhost:16686/search 
     - Acessar via terminal o diretório raiz da aplicação (onde está o pom.xml).
-    - Compilar a aplicação: ' mvn package -Dmaven.test.skip '
-    - Rodar a aplicação: ' java -jar target/todolistapi-1.0.0.jar '
+    - Compilar a aplicação: 'mvn package -Dmaven.test.skip'
+    - Rodar a aplicação: 'java -jar target/todolistapi-1.0.0.jar'
     - Testar o funcionamento com o CURL: 
     ```
         curl --location --request POST 'localhost:8080/token' \
         --header 'Content-Type: application/x-www-form-urlencoded' \
-        --data-urlencode 'user=admin' \
-        --data-urlencode 'pass=admin'
+        --data-urlencode 'user=generic' \
+        --data-urlencode 'pass=123456'
     ```
 
 ## Execução dos testes
 - Existem dois tipos de testes no projeto: unitários e de componente.
 - Para executá-los basta: ' mvn clean verify '
-    - PS: O DynamoDB precisa estar executando localmente para o correto funcionamento do testes de componente.
+    - **PS: O DynamoDB precisa estar executando localmente para o correto funcionamento do testes de componente.**
 - Após a execução, teremos o relatório do jacoco na pasta ' /target/site/jacoco/index.htm '
+    - **PS: a cobertura atual é de 94% para linhas e 79% para branches**
