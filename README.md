@@ -68,7 +68,10 @@ Existem dois tipos de testes no projeto: unitários e de componente.
     - **PS: a cobertura atual é de 94% para linhas e 79% para branches**
 
 ## Chamando a API
-Na api podemos criar, atualizar, excluir e obter tarefas de um usuário. Exemplos:
+Na api podemos criar, atualizar, excluir e obter tarefas de um usuário. 
+ - Via postman. Collections estão no link https://github.com/renanqb/todolistapi/tree/main/artifacts
+ - Via CURL
+Exemplos CURL:
 ***PS: sempre que chamarmos um endpoint precisamos passar o header token obtido no /token***
 - Obtendo token:
     ```
