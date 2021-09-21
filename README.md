@@ -134,7 +134,7 @@ docker-compose up --build
 ```
 docker-compose down -v --remove-orphans
 ```
-- ***PS: ao optar pelo docker-compose não é necessário executar os comando para subir o dynamo e o jaeger
+- ***PS: ao optar pelo docker-compose não é necessário executar os comando para subir o dynamo e o jaeger***
 ## Dívidas técnicas
 - *Habilitar todo o ambiente através do docker-compose
     - no momento no docker-compose estão apenas funcionais o dynamo e o jager. A aplicação buildou no comando docker build porem no compose ele nao compila.
