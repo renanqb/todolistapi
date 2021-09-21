@@ -69,63 +69,50 @@ Na api podemos criar, atualizar, excluir e obter tarefas de um usuário. Exemplo
 ***PS: sempre que chamarmos um endpoint precisamos passar o header token obtido no /token***
 - Obtendo token:
     ```
-        curl --location --request POST 'localhost:8080/token' \
-        --header 'Content-Type: application/x-www-form-urlencoded' \
-        --data-urlencode 'user=generic' \
-        --data-urlencode 'pass=123456'
+    curl --location --request POST 'localhost:8080/token' \
+    --header 'Content-Type: application/x-www-form-urlencoded' \
+    --data-urlencode 'user=generic' \
+    --data-urlencode 'pass=123456'
     ```
 - Criar uma tarefa: 
     ```
-        curl --location --request POST 'localhost:8080/api/v1/tasks' \
-        --header 'Content-Type: application/json' \
-        --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJ0b2RvLWxpc3QtYXBpIiwic3ViIjoicmVuYW4iLCJhdXRob3JpdGllcyI6WyJVU0VSIl0sImlhdCI6MTYzMjIzOTIxMywiZXhwIjoxNjMyMjM5NTEzfQ.dMD5SSvH3ys0Zck9R4g6LzmWR4QXmdF6OZrcyAs_wdQ' \
-        --data-raw '{
-                "taskId": 1,
-                "title": "Relatório financeiro 2021",
-                "description": "Lorem ipsum dolor sit amet",
-                "status": "pending"
-        }'
+    curl --location --request POST 'localhost:8080/api/v1/tasks' \
+    --header 'Content-Type: application/json' \
+    --header 'Authorization: Bearer {token}' \
+    --data-raw '{
+        "taskId": 1,
+        "title": "Relatório financeiro 2021",
+        "description": "Lorem ipsum dolor sit amet",
+        "status": "pending"
+    }'
     ```
 - Atualizar uma tarefa: 
     ```
-        curl --location --request POST 'localhost:8080/api/v1/tasks/1' \
-        --header 'Content-Type: application/json' \
-        --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJ0b2RvLWxpc3QtYXBpIiwic3ViIjoicmVuYW4iLCJhdXRob3JpdGllcyI6WyJVU0VSIl0sImlhdCI6MTYzMjIzOTIxMywiZXhwIjoxNjMyMjM5NTEzfQ.dMD5SSvH3ys0Zck9R4g6LzmWR4QXmdF6OZrcyAs_wdQ' \
-        --data-raw '{
-                "taskId": 1,
-                "title": "Relatório financeiro 2021",
-                "description": "Lorem ipsum dolor sit amet",
-                "status": "completed"
-        }'
-    ```
-
-- Atualizar uma tarefa: 
-    ```
-        curl --location --request PUT 'localhost:8080/api/v1/tasks/1' \
-        --header 'Content-Type: application/json' \
-        --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJ0b2RvLWxpc3QtYXBpIiwic3ViIjoicmVuYW4iLCJhdXRob3JpdGllcyI6WyJVU0VSIl0sImlhdCI6MTYzMjIzOTIxMywiZXhwIjoxNjMyMjM5NTEzfQ.dMD5SSvH3ys0Zck9R4g6LzmWR4QXmdF6OZrcyAs_wdQ' \
-        --data-raw '{
-                "taskId": 1,
-                "title": "Relatório financeiro 2021",
-                "description": "Lorem ipsum dolor sit amet",
-                "status": "completed"
-        }'
+    curl --location --request PUT 'localhost:8080/api/v1/tasks/1' \
+    --header 'Content-Type: application/json' \
+    --header 'Authorization: Bearer {token}' \
+    --data-raw '{
+        "taskId": 1,
+        "title": "Relatório financeiro 2021",
+        "description": "Lorem ipsum dolor sit amet",
+        "status": "completed"
+    }'
     ```
 - Recuperar uma tarefa: 
     ```
-        curl --location --request GET 'localhost:8080/api/v1/tasks/1' \
-        --header 'Content-Type: application/json' \
-        --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJ0b2RvLWxpc3QtYXBpIiwic3ViIjoicmVuYW4iLCJhdXRob3JpdGllcyI6WyJVU0VSIl0sImlhdCI6MTYzMjIzOTIxMywiZXhwIjoxNjMyMjM5NTEzfQ.dMD5SSvH3ys0Zck9R4g6LzmWR4QXmdF6OZrcyAs_wdQ'
+    curl --location --request GET 'localhost:8080/api/v1/tasks/1' \
+    --header 'Content-Type: application/json' \
+    --header 'Authorization: Bearer {token}'
     ```
 - Recuperar todas as tarefas do usuário:
     ```
-        curl --location --request GET 'localhost:8080/api/v1/tasks' \
-        --header 'Content-Type: application/json' \
-        --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJ0b2RvLWxpc3QtYXBpIiwic3ViIjoicmVuYW4iLCJhdXRob3JpdGllcyI6WyJVU0VSIl0sImlhdCI6MTYzMjIzOTIxMywiZXhwIjoxNjMyMjM5NTEzfQ.dMD5SSvH3ys0Zck9R4g6LzmWR4QXmdF6OZrcyAs_wdQ'
+    curl --location --request GET 'localhost:8080/api/v1/tasks' \
+    --header 'Content-Type: application/json' \
+    --header 'Authorization: Bearer {token}'
     ```
 - Excluir uma tarefa: 
     ```
-        curl --location --request DELETE 'localhost:8080/api/v1/tasks/1' \
-        --header 'Content-Type: application/json' \
-        --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJ0b2RvLWxpc3QtYXBpIiwic3ViIjoicmVuYW4iLCJhdXRob3JpdGllcyI6WyJVU0VSIl0sImlhdCI6MTYzMjIzOTIxMywiZXhwIjoxNjMyMjM5NTEzfQ.dMD5SSvH3ys0Zck9R4g6LzmWR4QXmdF6OZrcyAs_wdQ'
+    curl --location --request DELETE 'localhost:8080/api/v1/tasks/1' \
+    --header 'Content-Type: application/json' \
+    --header 'Authorization: Bearer {token}'
     ```
