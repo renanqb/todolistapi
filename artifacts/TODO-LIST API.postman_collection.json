@@ -1,0 +1,267 @@
+{
+	"info": {
+		"_postman_id": "1fb3f06d-f5d7-4b58-b29d-4cf0571e9293",
+		"name": "TODO-LIST API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get all tasks",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}/api/v1/tasks",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get one task",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}/api/v1/tasks/1",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"tasks",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create task",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"taskId\": 10,\r\n        \"title\": \"Relatório financeiro 2021\",\r\n        \"description\": \"Lorem ipsum dolor sit amet. Id facilis itaque ut quibusdam dolores eum odio numquam et molestiae itaque! Ex magni eveniet ut amet nemo ut illo mollitia sed quia quas est velit doloribus sed debitis repudiandae. \",\r\n        \"status\": \"pending\"\r\n}"
+				},
+				"url": {
+					"raw": "{{endpoint}}/api/v1/tasks",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update task",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"taskId\": 10,\r\n        \"title\": \"Relatório financeiro 2021\",\r\n        \"description\": \"Lorem ipsum dolor sit amet. Id facilis itaque ut quibusdam dolores eum odio numquam et molestiae itaque! Ex magni eveniet ut amet nemo ut illo mollitia sed quia quas est velit doloribus sed debitis repudiandae\",\r\n        \"status\": \"completed\"\r\n}"
+				},
+				"url": {
+					"raw": "{{endpoint}}/api/v1/tasks/3",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"tasks",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete task",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 5,\r\n        \"userId\": \"666\",\r\n        \"title\": \"Fazer Bolo\",\r\n        \"description\": \"...\",\r\n        \"status\": \"pending\",\r\n        \"insertDate\": \"2021-09-17T20:33:05Z\",\r\n        \"updateDate\": \"2021-09-17T20:33:05Z\"\r\n}"
+				},
+				"url": {
+					"raw": "{{endpoint}}/api/v1/tasks/10",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"tasks",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "healthcheck",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}/actuator/health",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"actuator",
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "metrics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{endpoint}}/metrics",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"metrics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authentication",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "user",
+							"value": "admin",
+							"type": "text"
+						},
+						{
+							"key": "pass",
+							"value": "admin",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{endpoint}}/token",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"const loginRequest = {",
+					"    url: pm.environment.get(\"endpoint\") + \"/token\",",
+					"    method: 'POST',",
+					"    header: 'Content-Type: application/x-www-form-urlencoded',",
+					"    body: {",
+					"        mode: 'urlencoded',",
+					"        urlencoded: [",
+					"            { key: \"user\", value: pm.environment.get(\"user\") },",
+					"            { key: \"pass\", value: pm.environment.get(\"pass\") }",
+					"        ]",
+					"    }",
+					"};",
+					"",
+					"pm.sendRequest(loginRequest, function (err, response) {",
+					"    pm.environment.set(\"token\", response.json().token);",
+					"});"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
