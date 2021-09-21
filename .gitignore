@@ -8,6 +8,8 @@ target/
 /artifacts/html/
 /artifacts/*.csv
 /artifacts/*.jtl
+*.csv
+*.log
 
 ### STS ###
 .apt_generated
