@@ -35,8 +35,8 @@ Para executar esse projeto as seguintes ferramentas foram utilizadas:
     ```
     - O Jeager UI pode ser aberto no endereço http://localhost:16686/search 
     - Acessar via terminal o diretório raiz da aplicação (onde está o pom.xml).
-    - Compilar a aplicação: 'mvn package -Dmaven.test.skip'
-    - Rodar a aplicação: 'java -jar target/todolistapi-1.0.0.jar'
+    - Compilar a aplicação com o comando 'mvn package -Dmaven.test.skip
+    - Rodar a aplicação 'java -jar target/todolistapi-1.0.0.jar'
     - Testar o funcionamento com o CURL: 
     ```
         curl --location --request POST 'localhost:8080/token' \
@@ -47,7 +47,7 @@ Para executar esse projeto as seguintes ferramentas foram utilizadas:
 
 ## Execução dos testes
 - Existem dois tipos de testes no projeto: unitários e de componente.
-- Para executá-los basta: ' mvn clean verify '
+- Para executá-los basta executar 'mvn clean verify'
     - **PS: O DynamoDB precisa estar executando localmente para o correto funcionamento do testes de componente.**
-- Após a execução, teremos o relatório do jacoco na pasta ' /target/site/jacoco/index.htm '
+- Após a execução, teremos o relatório do jacoco na pasta '/target/site/jacoco/index.htm'
     - **PS: a cobertura atual é de 94% para linhas e 79% para branches**
