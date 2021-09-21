@@ -3,7 +3,11 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
+
+### JMeter ###
 /artifacts/html/
+/artifacts/*.csv
+/artifacts/*.jtl
 
 ### STS ###
 .apt_generated
