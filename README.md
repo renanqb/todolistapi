@@ -70,7 +70,6 @@ Na api podemos criar, atualizar, excluir e obter tarefas de um usuário. Exemplo
 - Obtendo token:
     ```
     curl --location --request POST 'localhost:8080/token' \
-    --header 'Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7' \
     --header 'Content-Type: application/x-www-form-urlencoded' \
     --data-urlencode 'user=generic' \
     --data-urlencode 'pass=123456'
@@ -78,12 +77,11 @@ Na api podemos criar, atualizar, excluir e obter tarefas de um usuário. Exemplo
 - Criar uma tarefa: 
     ```
     curl --location --request POST 'localhost:8080/api/v1/tasks' \
-    --header 'Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7' \
     --header 'Content-Type: application/json' \
     --header 'Authorization: Bearer {token}' \
     --data-raw '{
         "taskId": 1,
-        "title": "Relatório financeiro 2021",
+        "title": "Relatorio financeiro 2021",
         "description": "Lorem ipsum dolor sit amet",
         "status": "pending"
     }'
@@ -91,12 +89,11 @@ Na api podemos criar, atualizar, excluir e obter tarefas de um usuário. Exemplo
 - Atualizar uma tarefa: 
     ```
     curl --location --request PUT 'localhost:8080/api/v1/tasks/1' \
-    --header 'Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7' \
     --header 'Content-Type: application/json' \
     --header 'Authorization: Bearer {token}' \
     --data-raw '{
         "taskId": 1,
-        "title": "Relatório financeiro 2021",
+        "title": "Relatorio financeiro 2021",
         "description": "Lorem ipsum dolor sit amet",
         "status": "completed"
     }'
@@ -104,21 +101,18 @@ Na api podemos criar, atualizar, excluir e obter tarefas de um usuário. Exemplo
 - Recuperar uma tarefa: 
     ```
     curl --location --request GET 'localhost:8080/api/v1/tasks/1' \
-    --header 'Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7' \
     --header 'Content-Type: application/json' \
     --header 'Authorization: Bearer {token}'
     ```
 - Recuperar todas as tarefas do usuário:
     ```
     curl --location --request GET 'localhost:8080/api/v1/tasks' \
-    --header 'Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7' \
     --header 'Content-Type: application/json' \
     --header 'Authorization: Bearer {token}'
     ```
 - Excluir uma tarefa: 
     ```
     curl --location --request DELETE 'localhost:8080/api/v1/tasks/1' \
-    --header 'Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7' \
     --header 'Content-Type: application/json' \
     --header 'Authorization: Bearer {token}'
     ```
