@@ -126,8 +126,19 @@ jmeter -n -t="/d/git/todolistapi/artifacts/TODO-LIST-API TEST PLAN.jmx" -l testr
 ```
 Após execução, abrir o arquivo /html/index.html para ver os resultados.
 
+## Execução via docker-compose
+Podemos subir/terminar a aplicação* via docker-compose através dos comandos:
+```
+docker-compose up --build
+```
+```
+docker-compose down -v --remove-orphans
+```
+- ***PS: ao optar pelo docker-compose não é necessário executar os comando para subir o dynamo e o jaeger
 ## Dívidas técnicas
-- Habilitar todo o ambiente através do docker-compose
+- *Habilitar todo o ambiente através do docker-compose
+    - no momento no docker-compose estão apenas funcionais o dynamo e o jager. A aplicação buildou no comando docker build porem no compose ele nao compila.
 - Realizar testes de integração/componente com o DynamoDB embedded para poder rodar em esteira CI
 - Usuários não estão cadastrados na base de dados mas sim como stubs no UserRepository
+    - Criptografar password dos usuários (https://www.baeldung.com/java-password-hashing)
 - Não foi adicionado endpoint /metrics com o prometheus
