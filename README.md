@@ -51,10 +51,7 @@ Após instalar todos os itens do Setup devemos:
     ``` 
 - Testar o funcionamento com o CURL: 
     ```
-        curl --location --request POST 'localhost:8080/token' \
-        --header 'Content-Type: application/x-www-form-urlencoded' \
-        --data-urlencode 'user=generic' \
-        --data-urlencode 'pass=123456'
+    curl --location --request GET 'localhost:8080/actuator/health'
     ```
 
 ## Execução dos testes
