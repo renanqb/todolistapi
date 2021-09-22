@@ -51,10 +51,7 @@ Após instalar todos os itens do Setup devemos:
     ``` 
 - Testar o funcionamento com o CURL: 
     ```
-        curl --location --request POST 'localhost:8080/token' \
-        --header 'Content-Type: application/x-www-form-urlencoded' \
-        --data-urlencode 'user=generic' \
-        --data-urlencode 'pass=123456'
+    curl --location --request GET 'localhost:8080/actuator/health'
     ```
 
 ## Execução dos testes
@@ -69,10 +66,10 @@ Existem dois tipos de testes no projeto: unitários e de componente.
 
 ## Chamando a API
 Na api podemos criar, atualizar, excluir e obter tarefas de um usuário. 
- - Via postman. Collections estão no link https://github.com/renanqb/todolistapi/tree/main/artifacts
- - Via CURL
-Exemplos CURL:
-***PS: sempre que chamarmos um endpoint precisamos passar o header token obtido no /token***
+- Via postman. Collections estão no link https://github.com/renanqb/todolistapi/tree/main/artifacts
+- Via CURL
+- ***PS: sempre que chamarmos um endpoint precisamos passar o header token obtido no /token***
+Exemplos:
 - Obtendo token:
     ```
     curl --location --request POST 'localhost:8080/token' \
